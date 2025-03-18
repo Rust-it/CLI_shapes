@@ -120,10 +120,11 @@ def main():
 
         elif cmd == "list":
             if not manager.shapes:
-                print("Нет созданных фигур.")
+                print("Список фигур пуст.")
             else:
+                print("Созданные фигуры:")
                 for shape in manager.shapes:
-                    print(shape)
+                    print(f"  {shape}")
 
         else:
             print("Ошибка: неизвестная команда. Введите 'help' для справки.")
