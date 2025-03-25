@@ -1,47 +1,47 @@
-# Векторный редактор (CLI)
+# Vector Editor (CLI)
 
-Простой консольный векторный редактор для работы с геометрическими фигурами.
+A simple console-based vector editor for working with geometric shapes.
 
-## Особенности
+## Features
 
-- Создание фигур:
-  - 📍 Точка (по координатам)
-  - 📏 Отрезок (по двум точкам)
-  - ⭕ Круг (центр и радиус)
-  - ⬛ Квадрат (базовая точка и сторона)
-- Управление фигурами:
-  - Просмотр списка всех созданных объектов
-  - Удаление фигур по ID
-- Валидация входных параметров
-- Автоматическая генерация ID для фигур
-- Интерактивная справка (команда `help`)
+- Create shapes:
+  - 📍 Point (by coordinates)
+  - 📏 Line segment (by two points)
+  - ⭕ Circle (center and radius)
+  - ⬛ Square (base point and side length)
+- Manage shapes:
+  - View list of all created objects
+  - Delete shapes by ID
+- Input parameter validation
+- Automatic ID generation for shapes
+- Interactive help (use the `help` command)
 
-## Установка и запуск
+## Installation and Launch
 
-1. Убедитесь, что у вас установлен Python 3.10 или новее
-2. Скачайте файл редактора:
+1. Ensure Python 3.10 or newer is installed.
+2. Download the editor files:
    ```bash
    git clone https://github.com/Rust-it/CLI_shapes.git
    cd CLI_shapes
    ```
-3. Запустите программу:
+3. Run the program:
    ```bash
    python main.py
    ```
 
-## Использование
+## Usage
 
-### Основные команды
+### Basic Commands
 
-|Команда|Описание|
+|Command|Description|
 |-|-|
-|create <тип> [args]|Создать фигуру|
-|delete <id>|Удалить фигуру по ID|
-|list|Показать все фигуры|
-|help|Показать справку по командам|
-|exit|Выйти из программы|
+|create <тип> [args]|Create a shape|
+|delete <id>|Delete a shape by ID|
+|list|Show all shapes|
+|help|Display command help|
+|exit|Exit the program|
 
-### Создание фигур
+### Creating Shapes
 
 ```bash
 create point <x> <y>
@@ -50,7 +50,7 @@ create circle <cx> <cy> <radius>
 create square <x> <y> <side>
 ```
 
-Примеры:
+Examples:
 ```bash
 > create point 10.5 20
 Создана точка с ID 1.
@@ -59,7 +59,7 @@ create square <x> <y> <side>
 Создан круг с ID 2.
 ```
 
-### Просмотр фигур
+### Viewing Shapes
 
 ```bash
 > list
@@ -68,25 +68,25 @@ create square <x> <y> <side>
   ID 2: Круг с центром в (50, 50) и радиусом 30
 ```
 
-### Удаление фигуры
+### Deleting a Shape
 
 ```bash
 > delete 2
 Фигура с ID 2 удалена.
 ```
 
-## Разработка
+## Development
 
-### Структура проекта
+### Project Structure
 
-* Shape: Базовый класс для всех фигур
-* Наследники:
+* Shape: Base class for all shapes
+* Subclasses:
    * Point
    * Line
    * Circle
    * Square
-* ShapeManager: Менеджер для управления фигурами
+* ShapeManager: Manager for handling shapes
 
-### Требования
+### Requirements
 
 * Python 3.10+
